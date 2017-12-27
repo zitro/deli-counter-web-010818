@@ -37,7 +37,7 @@ end
 
 
 def now_serving(deliLine, name)
-  if deliLine !== 0
+  if deliLine.length !== 0
     puts "Currently serving #{deliLine.first}."
     deliLine.shift
   else
