@@ -31,15 +31,15 @@ end
 
 def take_a_number(deliLine, name)
   deliLine.push(name)
-  lastPerson = deliLine.slice(-1)[0]
-  puts "Welcome, #{lastPerson}. You are number #{deliLine.length} in line."
+  puts "Welcome, #{name}. You are number #{deliLine.length} in line."
 end
 
 
 
 def now_serving(deliLine, name)
   if deliLine && deliLine.length
-    puts "Currently serving #{deliLine.shift()}."
+    puts "Currently serving #{deliLine.first}."
+    deliLine.shift
   else
     puts "There is nobody waiting to be served!"
   end
