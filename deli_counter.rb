@@ -36,11 +36,11 @@ end
 
 
 
-def now_serving(deliLine, name)
-  if deliLine.length !== 0
-    puts "Currently serving #{deliLine.first}."
-    deliLine.shift
-  else
+def now_serving(deli)
+  if deli.empty?
     puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{deli.first}."
+    deli.shift
   end
 end
